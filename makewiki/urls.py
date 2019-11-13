@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from my_app import views
+
 
 """
 CHALLENGES:
@@ -30,6 +30,7 @@ urlpatterns = [
     # Wiki App
     path('', include('wiki.urls')),
 
-    # Class based views
-    path('', views.home, name='home'),
+
+    path('accounts/', include('django.contrib.auth.urls')),
+
 ]
