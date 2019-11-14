@@ -27,6 +27,9 @@ urlpatterns = [
     # Admin Site
     path('admin/', admin.site.urls),
 
+    # Accounts
+    path('accounts/', include('accounts.urls')),
+
     # Wiki App
     path('', include('wiki.urls')),
 

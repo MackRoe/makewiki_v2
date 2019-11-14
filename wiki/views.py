@@ -16,6 +16,7 @@ class PageListView(ListView):
           'pages': pages
         })
 
+
 class PageDetailView(DetailView):
     """ Renders a specific page based on it's slug."""
     model = Page
