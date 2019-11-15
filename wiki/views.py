@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import FormView
 
 from wiki.models import Page
+from wiki.forms import PageForm
 
 
 class PageListView(ListView):
@@ -27,3 +29,24 @@ class PageDetailView(DetailView):
         return render(request, 'page.html', {
           'page': page
         })
+
+
+# class PageSignUpView(SignupView):
+#     """ Renders sign up page """
+#     model = Page
+#     form_class = django.auth.forms.UserCreationForm
+#
+#     def get(self, request):
+#         return render(request, 'registration/signup.html', )
+
+
+class PageAddcardView(FormView):
+    template_name = 'addcard.html'
+    form_class = PageForm
+    success_url = ''
+
+
+    def get(self, request):
+        form = PageForm()
+        print('get_method')
+        return render(request, 'addcard.html', {'form': form})
