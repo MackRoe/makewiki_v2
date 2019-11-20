@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.views.generic.edit import FormView
+from django.views.generic.edit import FormView, CreateView
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse_lazy
 
 from wiki.models import Page
 from wiki.forms import PageForm
@@ -40,13 +42,19 @@ class PageDetailView(DetailView):
 #         return render(request, 'registration/signup.html', )
 
 
-class PageAddcardView(FormView):
+class PageAddcardView(CreateView):
     template_name = 'addcard.html'
-    form_class = PageForm
-    success_url = ''
-
+    # form_class = PageForm
+    # success_url = ''
 
     def get(self, request):
         form = PageForm()
         print('get_method')
+        return render(request, 'addcard.html', {'form': form})
+
+    def post(self, request):
+        form = PageForm(request.POST)
+        if form.is_valid():
+            newcard = form.save()
+            return HttpResponseRedirect(reverse_lazy('wiki-details-page', args=[newcard.slug]))
         return render(request, 'addcard.html', {'form': form})
