@@ -44,8 +44,6 @@ class PageDetailView(DetailView):
 
 class PageAddcardView(CreateView):
     template_name = 'addcard.html'
-    # form_class = PageForm
-    # success_url = ''
 
     def get(self, request):
         form = PageForm()
