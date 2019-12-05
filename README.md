@@ -2,6 +2,8 @@
 
 View the [lesson plan] that accompanies this activity.
 
+See live version on [Heroku](https://makewiki-v2-em.herokuapp.com/)
+
 ## Step 1: Follow Setup Guide
 
  **⭐️ IMPORTANT**: Change **YOUR_GITHUB_USERNAME** before hitting `<ENTER>` on the last step.<br>**✅ EXAMPLE**: Change `git remote add https://github.com/YOUR_GITHUB_USERNAME/makewiki` to `git remote add https://github.com/droxey/makewiki` for [Dani](https://github.com/droxey/makewiki)'s version of the `makewiki` project.
@@ -49,7 +51,7 @@ Add the link to your project in the [Course Tracker](https://make.sc/trackbew1.2
 
 ### Suggestions
 
-- Create a beautiful user interface for your wiki. [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/) is included with this starter pack! 
+- Create a beautiful user interface for your wiki. [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/) is included with this starter pack!
 - Customize the project and continue to experiment with the codebase.
 - Make the models more sophisticated.
 - What other features can you dream up? What would look good on your portfolio? Open up a discussion with your instructor to receive personalized feedback.

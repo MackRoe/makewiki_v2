@@ -147,7 +147,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 DEFAULT_LOGOUT_URL = '/'
 
-ALLOWED_HOSTS = ['localhost', 'uniqueprojectname.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'makewiki-v2-em.herokuapp.com']
 
 
 # PROTIP:
