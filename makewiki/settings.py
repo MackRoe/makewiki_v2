@@ -132,6 +132,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # wiki app settings
 WIKI_PAGE_TITLE_MAX_LENGTH = 600
 
@@ -144,6 +146,8 @@ LOGOUT_REDIRECT_URL = "/"
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 DEFAULT_LOGOUT_URL = '/'
+
+ALLOWED_HOSTS = ['localhost', 'uniqueprojectname.herokuapp.com']
 
 
 # PROTIP:
