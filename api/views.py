@@ -11,7 +11,7 @@ from api.serializers import PageSerializer
 
 class PageList(APIView):
     def get(self, request):
-        questions = Page.objects.all()[:20]
+        questions = Page.objects.all().order_by('-created')
         data = PageSerializer(questions, many=True).data
         return Response(data)
 
